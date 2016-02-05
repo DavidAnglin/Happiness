@@ -27,26 +27,10 @@ class FaceView: UIView {
     }
     
     var faceRadius: CGFloat {
-        return min(bounds.size.width, bounds.size.height) / 2 * 0.90
+        return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
     
     weak var dataSource: FaceViewDataSource?
-    
-    func scale(gesture: UIPinchGestureRecognizer) {
-        if gesture.state == .Changed {
-            scale *= gesture.scale
-            gesture.scale = 1
-        }
-    }
-    
-    private struct Scaling {
-        static let FaceRadiusToEyeRadiusRatio: CGFloat = 10
-        static let FaceRadiusToEyeOffsetRatio: CGFloat = 3
-        static let FaceRadiusToEyeSeperationRatio: CGFloat = 1.5
-        static let FaceRadiusToMouthWidthRatio: CGFloat = 1
-        static let FaceRadiusToMouthHeightRatio: CGFloat = 3
-        static let FaceRadiusToMouthOffsetRatio: CGFloat = 3
-    }
     
     private enum Eye { case Left, Right }
     
@@ -68,6 +52,16 @@ class FaceView: UIView {
         return path
     }
     
+    private struct Scaling {
+        static let FaceRadiusToEyeRadiusRatio: CGFloat = 10
+        static let FaceRadiusToEyeOffsetRatio: CGFloat = 3
+        static let FaceRadiusToEyeSeperationRatio: CGFloat = 1.5
+        static let FaceRadiusToMouthWidthRatio: CGFloat = 1
+        static let FaceRadiusToMouthHeightRatio: CGFloat = 3
+        static let FaceRadiusToMouthOffsetRatio: CGFloat = 3
+    }
+    
+    
     private func bezierPathForSmile(fractionOfMaxSmile: Double) -> UIBezierPath
     {
         let mouthWidth = faceRadius / Scaling.FaceRadiusToMouthWidthRatio
@@ -88,6 +82,13 @@ class FaceView: UIView {
         return path
     }
     
+    func scale(gesture: UIPinchGestureRecognizer) {
+        if gesture.state == .Changed {
+            scale *= gesture.scale
+            gesture.scale = 1.0
+        }
+    }
+    
     override func drawRect(rect: CGRect) {
        let facePath = UIBezierPath(arcCenter: faceCenter, radius: faceRadius, startAngle: 0, endAngle: CGFloat(2*M_PI), clockwise: true)
         facePath.lineWidth = lineWidth
@@ -101,7 +102,4 @@ class FaceView: UIView {
         let smilePath = bezierPathForSmile(smiliness)
         smilePath.stroke()
     }
-    
-    
-
 }

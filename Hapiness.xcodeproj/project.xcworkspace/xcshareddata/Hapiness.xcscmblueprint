@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "90935EBC2C0641F8233E9F96833F4C58203C6142",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7769432435191453A290BE71278277BFD9E03304" : 0,
+    "90935EBC2C0641F8233E9F96833F4C58203C6142" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "43A28984-88D7-4960-BF9B-337957269655",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7769432435191453A290BE71278277BFD9E03304" : "",
+    "90935EBC2C0641F8233E9F96833F4C58203C6142" : "Hapiness\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Hapiness",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Hapiness.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DavidAnglin\/Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7769432435191453A290BE71278277BFD9E03304"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DavidAnglin\/Happiness.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "90935EBC2C0641F8233E9F96833F4C58203C6142"
+    }
+  ]
+}
